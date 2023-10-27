@@ -1,0 +1,76 @@
+/* Styling for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    height: 100px;
+}
+
+
+
+.logo a{
+    background-color: white;
+}
+
+.logo a img{
+    width: 240px; /* Adjust the width as needed */
+    height: 100px;
+    float: left;
+}
+
+
+
+
+
+/* Style the navigation links (right side) */
+.nav-links ul {
+    list-style-type: none;
+}
+
+.nav-links ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-links ul li:last-child {
+    margin-right: 0;
+}
+
+
+@font-face {
+    font-family: customFont1;
+    src: url(../fonts/PTSerif-Regular.ttf);
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: black; /* Text color for links */
+    background-color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-family:customFont1;
+}
+
+.nav-links a:hover {
+    color:rgb(255, 217, 0);
+}
+
+
+
+
+footer {
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.25rem;
+    font-family:customFont1;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
