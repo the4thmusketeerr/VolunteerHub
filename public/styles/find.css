@@ -1,13 +1,10 @@
-body{
-    margin: 0 0 0 0;
-}
 
 
 .searcharea{
     display: flex;  
     align-items: center; 
-    height: 100vh;
-    position: absolute;
+    height: 100px;
+    position: relative;
     top: 5%;
     left: 26%;
 }
