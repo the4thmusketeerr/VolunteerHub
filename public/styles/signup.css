@@ -98,6 +98,10 @@ button {
     font-family: customFont1;
 }
 
+button:hover{
+    background-color: #666;
+}
+
 
 .forgot-password{
     float: right;
