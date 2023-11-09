@@ -54,7 +54,16 @@ label {
     
 }
 
+p.error {
+    color: red;
+    margin-top: 15px;
+}
 
+p.error.message {
+    font-size: 14px;
+    color: red;
+    text-align: center;
+}
 
 a {
     color: #666;

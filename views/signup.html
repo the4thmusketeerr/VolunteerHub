@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  href="../public/styles/shared.css" />
-    <link rel="stylesheet"  href="../public/styles/signup.css" />
-    <link rel="icon" type="image/x-icon" href="/public/images/icons/favicon.ico">
-    <title>VolunteerHub</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"  href="../public/styles/shared.css" />
+        <link rel="stylesheet"  href="../public/styles/signup.css" />
+        <link rel="icon" type="image/x-icon" href="/public/images/icons/favicon.ico">
+        <link rel="stylesheet" href="">
+        <title>VolunteerHub</title>
+    </head>
 <body>
     <div class="container">
-        <form class="signin-form" action="index.html">
+        <form class="signin-form" action="index.html" onsubmit="return validateForm();">
             <h2>Create your VolunteerHub Account</h2>
+            <br>
             <div class="input-container">
                 <label for="username">Full name</label>
                 <input type="text" id="text" name="text" required>
@@ -30,13 +32,55 @@
             </div>
             <div class="input-container">
                 <div class="password-row">
-                    <label for="password">Confirm Password</label>
+                    <label for="password-confirm">Confirm Password</label>
                 </div>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password-confirm" name="password-confirm" required>
+                <p class="error" id="error-message"></p>
+            
             </div>
-            <button href = "index.html" type="submit">Create Account</button>
+            <button type="submit">Create Account</button>
         </form>
     </div>
-    
+
+    <script>
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("password-confirm").value;
+            const errorMessage = document.getElementById('error-message');
+            errorMessage.textContent = ""; // Clear any previous error messages
+
+            if (password.length < 8) {
+                errorMessage.textContent = "Your password should be at least 8 characters long.";
+                event.preventDefault();
+                return;
+            }
+
+                if (password.length < 8) {
+                errorMessage.textContent = "Your password should be at least 8 characters long.";
+                event.preventDefault();
+                return;
+            }
+
+            if (!/\d/.test(password)) {
+                errorMessage.textContent = "Your password should contain at least one number.";
+                event.preventDefault();
+                return;
+            }
+
+            if (!/[A-Z]/.test(password)) {
+                errorMessage.textContent = "Your password should contain at least one capital letter.";
+                event.preventDefault();
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                errorMessage.textContent = "Passwords do not match.";
+                event.preventDefault();
+                return;
+            }
+
+            return true;
+        }
+    </script>
 </body>
 </html>
