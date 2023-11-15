@@ -8,7 +8,7 @@ VolunteerHub will assist volunteers looking for opportunities to give back to th
 # The Team
 * **Kelvin Donkor** [@the4thmusketeerr](https://github.com/the4thmusketeerr) 
 * **Raphael Agbedanu** [@RaphaelWright](https://github.com/RaphaelWright) 
-* **Prince Ampah** [@eQuayson](https://github.com/eQuayson)
+* **Prince Ampah** [@Spar-r0w](https://github.com/Spar-r0w)
 * **Edinam Quayson**  [@eQuayson](https://github.com/eQuayson)
 
 # Blog Posts
