@@ -15,7 +15,12 @@ VolunteerHub will assist volunteers looking for opportunities to give back to th
 
 # Project Summary
 ## Technologies Used
+
 ## Deployed Site Images
+
+
 ## Installation
-## Authors
+
+
 ## License
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
