@@ -25,6 +25,11 @@ app.get('/' , function(req,res){
     res.sendFile(htmlFilePath)
 })
 
+app.get('/recruit' , function(req,res){
+    const htmlFilePath = path.join(__dirname, 'views' , 'recruit.html')
+    res.sendFile(htmlFilePath)
+})
+
 app.get('/find' , function(req,res){
     const htmlFilePath = path.join(__dirname, 'views' , 'find.html')
     res.sendFile(htmlFilePath)
