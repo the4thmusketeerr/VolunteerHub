@@ -1,4 +1,5 @@
 /* Default styling for the navbar for all the webpages */
+/* It only styles the header and the foorter  */
 .navbar {
     display: flex;
     justify-content: space-between;
