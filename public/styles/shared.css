@@ -76,17 +76,69 @@ body, ul {
 
 
 /* Default styling for the footer of all the webpages */
+
 footer {
     text-align: center;
     background-color: white;
     color: black;
     padding: 10px 0;
     position: absolute;
+    display: flex;
     bottom: 0;
     width: 100%;
-    font-size: 1.25rem;
-    font-family:customFont1;
-    text-decoration: none;
-    font-weight: bold;
-    
+    background-color: white;
+} 
+
+.copyright{
+    margin-left: 10px;
 }
+
+
+.copyright a{
+    text-decoration: none;
+    color:black;
+    font-size: 18px;
+    font-weight: bold;
+    font-family:customFont1;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    max-width: 1200px ;
+
+}
+
+.footer-links {
+    margin-right: -135px;
+}
+
+.footer-links ul {
+    list-style: none;
+    
+
+}
+
+.footer-links ul li {
+    display: inline;
+    margin-right:15px ;
+
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: black; /* Text color for links */
+    background-color: white;
+    font-size: 18px;
+    font-weight: bold;
+    font-family:customFont1;
+}
+
+.footer-links ul li:last-child {
+    margin-right: 0;
+}
+
+
