@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/styles/create.css" />
+    <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,400;9..40,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <title>VolunteerHub</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+          <div class="logo">
+            <a href="/">
+              <img src="/images/logos/vh.svg" />
+            </a>
+          </div>
+          <div class="nav-links">
+            <ul>
+              <li><a href="/find">Find Opportunities</a></li>
+              <li><a href="/create">Create Event</a></li>
+              <li><a href="/signin">Sign In</a></li>
+              <li><a href="/signup">Sign Up</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <h1>Create an Event</h1>
+        <form action="#" method="post">
+          <div class="form-control">
+            <label for="organizationName">Name of Organization</label>
+            <input type="text" id="organizationName" name="organizationName" required>
+          </div>
+          <div class="form-control">
+            <label for="eventTitle">Event Title</label>
+            <input type="text" id="eventTitle" name="eventTitle" required>
+          </div>
+          <div class="form-control">
+            <label for="eventDescription">Event Description</label>
+            <textarea id="eventDescription" name="eventDescription" required rows="4"></textarea>
+          </div>
+          <div class="form-control">
+            <label for="dateTime">Date and Time</label>
+            <input type="datetime-local" id="dateTime" name="dateTime" required>
+          </div>
+          <div class="form-control">
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" required>
+          </div>
+          <div class="form-control">
+            <label for="duration">Duration</label>
+            <input type="text" id="duration" name="duration">
+          </div>
+          <div class="form-control">
+            <label for="volunteersNeeded">Number of Volunteers Needed</label>
+            <input type="number" id="volunteersNeeded" name="volunteersNeeded" min="1">
+          </div>
+          <div class="form-control">
+            <label for="skillsQualifications">Skills and Qualifications</label>
+            <input type="text" id="skillsQualifications" name="skillsQualifications">
+          </div>
+          <div class="form-control">
+            <label for="ageRestrictions">Age Requirement</label>
+            <select>
+              <option value="value1">No Limit</option>
+              <option value="value2">18 years and above</option>
+              </select>
+          </div>
+          <div class="form-control">
+            <label for="volunteerResponsibilities">Volunteer Responsibilities</label>
+            <textarea id="volunteerResponsibilities" name="volunteerResponsibilities" rows="4"></textarea>
+          </div>
+          <div class="form-control">
+            <label for="contactName">Contact Name</label>
+            <input type="text" id="contactName" name="contactName" required>
+          </div>
+          <div class="form-control">
+            <label for="contactEmail">Contact Email</label>
+            <input type="email" id="contactEmail" name="contactEmail" required>
+          </div>
+          <div class="form-control">
+            <label for="contactPhone">Contact Phone</label>
+            <input type="tel" id="contactPhone" name="contactPhone" required>
+          </div>
+          <div class="form-control">
+            <label for="organizationInfo">Organization Information</label>
+            <textarea id="organizationInfo" name="organizationInfo" rows="3"></textarea>
+          </div>
+          <div class="form-control">
+            <label for="imageUpload">Logo or Poster Upload</label>
+            <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
+          </div>
+          <div class="form-control">
+            <label for="additionalComments">Additional Comments/Notes</label>
+            <textarea id="additionalComments" name="additionalComments" rows="4"></textarea>
+          </div>
+          
+          <button class="btn">Create Event</button>
+        </form>
+      </main>
+      
+
+
+
+      <footer class="footer">
+        <div class="contain">
+          <div class="col">
+            <h1>Company</h1>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Mission</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Social</a></li>
+              <li><a href="#">Get in touch</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h1>Products</h1>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Mission</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Social</a></li>
+              <li><a href="#">Get in touch</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h1>Accounts</h1>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Mission</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Social</a></li>
+              <li><a href="#">Get in touch</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h1>Resources</h1>
+            <ul>
+              <li><a href="#">Webmail</a></li>
+              <li><a href="#">Redeem code</a></li>
+              <li><a href="#">WHOIS lookup</a></li>
+              <li><a href="#">Site map</a></li>
+              <li><a href="#">Web templates</a></li>
+              <li><a href="#">Email templates</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h1>Support</h1>
+            <ul>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Web chat</a></li>
+              <li><a href="#">Open ticket</a></li>
+            </ul>
+          </div>
+          <div class="col social">
+            <h1>Social</h1>
+            <ul>
+              <li><a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a></li>
+              <li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </footer>
+  
+    
+</body>
+</html>

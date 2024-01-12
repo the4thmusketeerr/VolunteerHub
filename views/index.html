@@ -1,62 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  href="/styles/shared.css" />
-    <link rel="stylesheet"  href="/styles/index.css" />
-    <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,400;9..40,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <title>VolunteerHub</title>
-</head>
+  </head>
 
-
-<body>
+  <body>
     <header>
-        <div class="navbar">
-            <div class="logo">
-                <a href="/">
-                    <img src="/images/logos/vh.svg">
-                </a>
-            </div>
-            <div class="nav-links">
-                <ul>
-                    <li><a href="/find">Find Opportunities</a></li>
-                    <li><a href="#">Recruit Volunteers</a></li>
-                    <li><a href="/signin">Sign In</a></li>
-                </ul>
-            </div>
+      <div class="navbar">
+        <div class="logo">
+          <a href="/">
+            <img src="/images/logos/vh.svg" />
+          </a>
         </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="/find">Find Opportunities</a></li>
+            <li><a href="/create">Create Event</a></li>
+            <li><a href="/signin">Sign In</a></li>
+            <li><a href="/signup">Sign Up</a></li>
+          </ul>
+        </div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+      </div>
+      
     </header>
-    
-    <div class="content">
+
     <main>
-        <p>Find local volunteer opportunities or post your events to request volunteers.</p>
-        <a href="#">Browse Opportunities</a>
-        <a href="#">Organize an Event</a>
-    </main>
-    </div>
-    
-    
-    
-    <footer>
-            <div class="container">
-                
-                <span class="copyright">
-                    <a href="/"> VolunteerHub &copy; </a>
-                </span>
+      <section class="hero-section">
+        <div class="hero-text">
+          <h1>Connecting Volunteers with Opportunities</h1>
+          <p>
+            Find local volunteer opportunities or post your events to request
+            volunteers.
+          </p>
+          <button>Join VolunteerHub</button>
+        </div>
+      </section>
 
-                <div class="footer-links">
-                    <ul>
-                        <li><a href="#" class="hover-underline">About</a></li>
-                        <li><a href="#" class="hover-underline">Privacy Policy</a></li>
-                        <li><a href="#" class="hover-underline">Licensing</a></li>
-                        <li><a href="#" class="hover-underline">Contact</a></li>
-                    </ul>
-                </div>
-                
+      <h2>Upcoming Events</h2>
+      <section class="card-section">
+        <a href="#" class="card-link">
+        <div class="card">
+          <img src="./images/homepage/event1.jpeg" />
+          <div class="card-text">
+            <h3 class="title">Event Title</h3>
+            <p class="date-time">
+              <i class="fas fa-calendar-alt"></i> December 31, 2023 <br>
+              <span class="time"
+                ><i class="far fa-clock"></i> 10:00 AM</span
+              >
+            </p>
+            <p class="location">
+                <i class="fas fa-map-marker-alt"></i> Your City, Country
+            </p>
+          </div>
+        </div>
+        </a>
+
+        <a href="#" class="card-link">
+          <div class="card">
+            <img src="./images/homepage/event2.jpeg" />
+            <div class="card-text">
+              <h3 class="title">Event Title</h3>
+              <p class="date-time">
+                <i class="fas fa-calendar-alt"></i> January 12, 2024 <br>
+                <span class="time"
+                  ><i class="far fa-clock"></i> 7:00 PM</span
+                >
+              </p>
+              <p class="location">
+                  <i class="fas fa-map-marker-alt"></i> Your City, Country
+              </p>
             </div>
-    </footer>
+          </div>
+          </a>
 
-  
-</body>
+          <a href="#" class="card-link">
+            <div class="card">
+              <img src="./images/homepage/event3.jpeg" />
+              <div class="card-text">
+                <h3 class="title">Event Title</h3>
+                <p class="date-time">
+                  <i class="fas fa-calendar-alt"></i> February 1, 2024 <br>
+                  <span class="time"
+                    ><i class="far fa-clock"></i> 11:30 AM</span
+                  >
+                </p>
+                <p class="location">
+                    <i class="fas fa-map-marker-alt"></i> Your City, Country
+                </p>
+              </div>
+            </div>
+            </a>
+        <!-- this section will be influenced by the database -->
+      </section>
+
+      <h2 class="Find">Find Volunteer Opportunities</h2>
+      <section class="search-section">
+        <div class="search-container">
+          <form id="searchForm">
+            <input type="text" id="location" placeholder="Location" />
+            <input type="text" id="typeOfWork" placeholder="Type of Work" />
+            <input type="date" id="date" placeholder="Date" />
+            <input type="text" id="keyword" placeholder="Keyword" />
+            <button type="submit" onclick="searchOpportunities()">
+              Search
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <h2>How VolunteerHub Works</h2>
+      <section class="how-it-works-section">
+        <div class="how-it-works-container">
+          <div class="how-it-works-step">
+            <div class="step-number">1</div>
+            <h3>Sign Up</h3>
+            <p>
+              Create an account on VolunteerHub to access volunteer
+              opportunities.
+            </p>
+          </div>
+          <div class="how-it-works-step">
+            <div class="step-number">2</div>
+            <h3>Search</h3>
+            <p>
+              Find volunteer opportunities by location, type of work, date, or
+              keywords.
+            </p>
+          </div>
+          <div class="how-it-works-step">
+            <div class="step-number">3</div>
+            <h3>Apply</h3>
+            <p>
+              Apply for volunteer opportunities that interest you and match your
+              skills.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="contain">
+        <div class="col">
+          <h1>Your Account</h1>
+          <ul>
+            <li><a href="#">Signup</a></li>
+            <li><a href="#">Signin</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h1>Discover Events</h1>
+          <ul>
+            <li><a href="#">Events Near Me</a></li>
+            <li><a href="#">Accra Events</a></li>
+            <li><a href="#">Tema Events</a></li>
+            <li><a href="#">Kumasi Events</a></li>
+            <li><a href="#">Cape Coast Events</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h1>Plan Events</h1>
+          <ul>
+            <li><a href="#">Event Planning</a></li>
+            <li><a href="#">Virtual Events Platform</a></li>
+            <li><a href="#">Event Services</a></li>
+            <li><a href="#">Event Management Software</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h1>Company</h1>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h1>Support</h1>
+          <ul>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Live Web chat</a></li>
+          </ul>
+        </div>
+        <div class="col social">
+          <h1>Social</h1>
+          <ul>
+            <li><a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </footer>
+    
+
+    <script>
+      window.addEventListener("scroll", function () {
+        let footer = document.querySelector("footer");
+        let scrollPosition = window.scrollY;
+
+        let footerHeight = footer.offsetHeight; // Height of the footer
+        let windowHeight = window.innerHeight; // Height of the viewport
+        let bodyHeight = document.body.offsetHeight; // Height of the entire document body
+
+        // Calculate the scroll position at which the footer should become visible
+        let showFooterAt = bodyHeight - windowHeight - footerHeight;
+
+        if (scrollPosition >= showFooterAt) {
+          footer.style.display = "block"; // Show the footer when scrolled to the specified position
+        } else {
+          footer.style.display = "none"; // Hide the footer when not scrolled to that position
+        }
+      });
+
+
+
+
+      function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links ul');
+      const hamburger = document.querySelector('.hamburger-icon');
+      hamburger.classList.toggle('change');
+      navLinks.classList.toggle('open');
+}
+    </script>
+  </body>
 </html>

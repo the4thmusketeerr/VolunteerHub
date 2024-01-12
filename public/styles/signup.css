@@ -1,20 +1,18 @@
-body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+
 
 @font-face {
     font-family: customFont1;
     src: url(../fonts/PTSerif-Regular.ttf);
 }
 
-
+.main-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .container {
+    margin-top: 50px;
+    margin-bottom: 50px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -26,7 +24,7 @@ body {
 }
 
 .signin-form {
-    margin: 0 auto;
+    margin: 0 auto; 
 }
 
 h2 {
@@ -113,3 +111,51 @@ button:hover{
     margin-top: 20px;
     color: #333;
 }
+
+
+
+
+/* Media queries for responsiveness */
+
+/* For smaller screens */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjust width for smaller screens */
+        max-width: 350px; /* Set a maximum width */
+    }
+
+    .input-container {
+        width: 100%; /* Adjust input container width */
+    }
+
+    button {
+        width: 100%; /* Make the button full width */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Adjust heading font size */
+    }
+
+    label,
+    input {
+        font-size: 0.9rem; /* Adjust font size for labels and inputs */
+    }
+}
+
+/* For even smaller screens, e.g., mobile phones */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90%; /* Adjust width for smaller screens */
+        max-width: 280px; /* Set a maximum width */
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Adjust heading font size */
+    }
+
+    label,
+    input {
+        font-size: 0.8rem; /* Adjust font size for labels and inputs */
+    }
+}
+

@@ -1,8 +1,12 @@
 const express = require('express');
+
 const app = express()
 
 const path = require('path');
+
 const fs = require("fs");
+
+const db = require('./data/database');
 
 // const pageRoutes = require('./routes/volunteer')
 
@@ -30,6 +34,12 @@ app.get('/find' , function(req,res){
     res.sendFile(htmlFilePath)
 })
 
+app.get('/create' , function(req,res){
+    const htmlFilePath = path.join(__dirname, 'views' , 'create.html')
+    res.sendFile(htmlFilePath)
+})
+
+
 
 app.get('/signin' , function(req,res){
     const htmlFilePath = path.join(__dirname, 'views' , 'signin.html')
@@ -44,7 +54,14 @@ app.get('/signup' , function(req,res){
 
 
 
+app.use(function (error, req, res, next) {
+    // Default error handling function
+    // Will become active whenever any route / middleware crashes
+    console.log(error);
+    res.status(500).render('500');
+  });
+  
+db.connectToDatabase().then(function() {
+      app.listen(3000);
+ })
 
-
-
-app.listen(3000)

@@ -5,11 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet"  href="/styles/shared.css" />
         <link rel="stylesheet"  href="/styles/signup.css" />
-        <link rel="icon" type="image/x-icon" href="/public/images/icons/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico">
         <link rel="stylesheet" href="">
         <title>VolunteerHub</title>
     </head>
 <body>
+        <header>
+          <div class="navbar">
+            <div class="logo">
+              <a href="/">
+                <img src="/images/logos/vh.svg" />
+              </a>
+            </div>
+          </div>
+        </header>
+
+    <main class="main-content">    
     <div class="container">
         <form class="signin-form" action="index.html" onsubmit="return validateForm();">
             <h2>Create your VolunteerHub Account</h2>
@@ -41,6 +52,7 @@
             <button type="submit">Create Account</button>
         </form>
     </div>
+    </main>
 
     <script>
         function validateForm() {
