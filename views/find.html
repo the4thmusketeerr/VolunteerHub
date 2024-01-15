@@ -5,6 +5,16 @@
         <link rel="stylesheet" href="/styles/shared.css">
         <link rel="stylesheet" href="/styles/find.css">
         <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,400;9..40,500&display=swap"
+      rel="stylesheet"
+    />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     </head>
     <body>
         <header>
@@ -27,82 +37,103 @@
         
 
 
-        <!-- <main>
-                <div class="searcharea">
-                <form>
-                    <input type="text" placeholder="Search...">
-                    <button type="submit">Search</button>
-                </form>
-                </div>
-        </main> -->
-        
-        
-
-        
-
-        <footer class="footer">
-            <div class="contain">
-              <div class="col">
-                <h1>Company</h1>
-                <ul>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Mission</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Social</a></li>
-                  <li><a href="#">Get in touch</a></li>
-                </ul>
-              </div>
-              <div class="col">
-                <h1>Products</h1>
-                <ul>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Mission</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Social</a></li>
-                  <li><a href="#">Get in touch</a></li>
-                </ul>
-              </div>
-              <div class="col">
-                <h1>Accounts</h1>
-                <ul>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Mission</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Social</a></li>
-                  <li><a href="#">Get in touch</a></li>
-                </ul>
-              </div>
-              <div class="col">
-                <h1>Resources</h1>
-                <ul>
-                  <li><a href="#">Webmail</a></li>
-                  <li><a href="#">Redeem code</a></li>
-                  <li><a href="#">WHOIS lookup</a></li>
-                  <li><a href="#">Site map</a></li>
-                  <li><a href="#">Web templates</a></li>
-                  <li><a href="#">Email templates</a></li>
-                </ul>
-              </div>
-              <div class="col">
-                <h1>Support</h1>
-                <ul>
-                  <li><a href="#">Contact us</a></li>
-                  <li><a href="#">Web chat</a></li>
-                  <li><a href="#">Open ticket</a></li>
-                </ul>
-              </div>
-              <div class="col social">
-                <h1>Social</h1>
-                <ul>
-                  <li><a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a></li>
-                  <li><a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a></li>
-                  <li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
-                </ul>
-              </div>
-              <div class="clearfix"></div>
+      <main>
+        <div class="search-area">
+          <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search...">
+            <i class="material-icons filter-icon" onclick="openFilterDialog()">tune</i>
+          </div>
+          <div class="popup" id="filterPopup">
+            <div class="popup-content">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date">
+                <label for="time">Time</label>
+                <input type="time" id="time" name="time">
+                <label for="organization">Organization:</label>
+                <input type="text" id="organization" name="organization">
+                <button onclick="applyFilter()">Apply</button>
             </div>
-        </footer>
+        </div>
+      </div>
+ 
+      </main>
+        
+        
+
+        
+
+      <footer class="footer">
+        <div class="contain">
+          <div class="col">
+            <h1>Your Account</h1>
+            <ul>
+              <li><a href="#">Signup</a></li>
+              <li><a href="#">Signin</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h1>Discover Events</h1>
+            <ul>
+              <li><a href="#">Events Near Me</a></li>
+              <li><a href="#">Accra Events</a></li>
+              <li><a href="#">Tema Events</a></li>
+              <li><a href="#">Kumasi Events</a></li>
+              <li><a href="#">Cape Coast Events</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h1>Plan Events</h1>
+            <ul>
+              <li><a href="#">Event Planning</a></li>
+              <li><a href="#">Virtual Events Platform</a></li>
+              <li><a href="#">Event Services</a></li>
+              <li><a href="#">Event Management Software</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h1>Company</h1>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h1>Support</h1>
+            <ul>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Live Web chat</a></li>
+            </ul>
+          </div>
+          <div class="col social">
+            <h1>Social</h1>
+            <ul>
+              <li><a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a></li>
+              <li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </footer>
         
     </body>
+    <script>
+      function openFilterDialog() {
+          var popup = document.getElementById("filterPopup");
+          popup.style.display = "flex";
+      }
+
+      function applyFilter() {
+          var popup = document.getElementById("filterPopup");
+          popup.style.display = "none";
+          // Add logic to apply filter here
+      }
+   </script>
 </html>
