@@ -14,7 +14,8 @@
     />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+        <script src="../scripts/create.js" defer></script>
+        <title>VolunteerHub</title>
     </head>
     <body>
         <header>
@@ -41,7 +42,7 @@
         <div class="search-area">
           <div class="search-bar">
             <input type="text" class="search-input" placeholder="Search...">
-            <i class="material-icons filter-icon" onclick="openFilterDialog()">tune</i>
+            <i class="material-icons filter-icon" onclick="openFilterDialog()">tune</i> 
           </div>
           <div class="popup" id="filterPopup">
             <div class="popup-content">
@@ -57,8 +58,32 @@
             </div>
         </div>
       </div>
+
+
+      <section class="card-section">
+      <% events.forEach(event => { %>
+        <a href="#" class="card-link">
+            <div class="card">
+                <img src="<%= event.imagePath %>" />
+                <div class="card-text">
+                    <h3 class="title"><%= event.eventTitle %></h3>
+                    <p class="date-time">
+                        <i class="fas fa-calendar-alt"></i> <%= event.date %> <br>
+                        <span class="time"><i class="far fa-clock"></i> <%= event.time %></span>
+                    </p>
+                    <p class="location">
+                        <i class="fas fa-map-marker-alt"></i> <%= event.location %>
+                    </p>
+                </div>
+            </div>
+        </a>
+    <% }) %>
+  </section>
+    
+
+      
  
-      </main>
+</main>
         
         
 
@@ -122,18 +147,26 @@
           <div class="clearfix"></div>
         </div>
       </footer>
-        
-    </body>
-    <script>
-      function openFilterDialog() {
-          var popup = document.getElementById("filterPopup");
-          popup.style.display = "flex";
-      }
+      
+      <script>
+        function openFilterDialog() {
+        var popup = document.getElementById("filterPopup");
+        popup.style.display = "flex";
+    }
 
-      function applyFilter() {
-          var popup = document.getElementById("filterPopup");
-          popup.style.display = "none";
-          // Add logic to apply filter here
-      }
-   </script>
+    function applyFilter() {
+        var popup = document.getElementById("filterPopup");
+        popup.style.display = "none";
+        // Add logic to apply filter here
+    }
+       
+      </script>
+           
+          
+    
+    
+
+  </body>
+    
+
 </html>

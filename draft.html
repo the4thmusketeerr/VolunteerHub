@@ -86,3 +86,65 @@
             .footer-links ul li:last-child {
                 margin-right: 0;
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // Insert the form data into the 'events' collection
+            await eventsCollection.insertOne({
+              organizationName,
+              eventTitle,
+              eventDescription,
+              dateTime,
+              location,
+              duration,
+              volunteersNeeded,
+              skillsQualifications,
+              ageRestrictions,
+              volunteerResponsibilities,
+              contactName,
+              contactEmail,
+              contactPhone,
+              organizationInfo,
+              additionalComments,
+              // Add other fields as needed
+            });
+            
+      
+ 
+            
+            // Respond with a success message
+            res.send('Event created successfully!');
+          } catch (error) {
+            console.error('Error creating event:', error);
+            res.status(500).send('Internal Server Error');
+          }
+
+
+
+          // Set up multer storage
+          const storage = multer.diskStorage({
+            destination: function (req, file, cb) {
+              // Specify the directory where uploaded files will be stored
+              const uploadDir = path.join(__dirname, '..', '..', 'Desktop', 'vh-eventpics');
+              cb(null, uploadDir);
+            },
+            filename: function (req, file, cb) {
+              // Generate a unique filename for the uploaded file
+              cb(null, Date.now() + '-' + file.originalname)
+            }
+          });

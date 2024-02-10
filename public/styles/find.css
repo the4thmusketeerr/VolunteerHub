@@ -1,13 +1,15 @@
 /* find.css */
 
-/* Add your custom styles here */
+
+/* Search section */
 main {
     padding: 20px;
 }
 
 .search-area{
     max-width: 25rem;
-    height: 400px;
+    height: 200px;
+    margin-bottom: -180px;
 }
 
 .search-bar {
@@ -70,6 +72,94 @@ main {
     cursor: pointer;
 }
 
+@media screen and (max-width: 1000px) {
+
+    .search-area{
+        max-width: 25rem;
+        height: 200px;
+        margin-bottom: -180px;
+    }
+    
+    .search-bar {
+        display: flex;
+        margin-left: 210px;
+    }
+
+    .popup-content {
+        width: 90%;
+    }
+}
+
+
+
+/* Card section */
+
+.card-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.card {
+    width: 325px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    height:  400px;
+    max-height: 344px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.card-text {
+    height: calc(100% - 200px);
+    display: flex;
+    flex-direction: column;
+    font-family: 'DM Sans', sans-serif;;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card-text h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text p {
+    margin: 5px 0;
+}
+
+
+/* .date-time .time{
+    margin-top: 50px;
+    margin-bottom:100px ;
+} */
+
+
+
+.card-text .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: black;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    color: #fff;
+}
+
 
 
 /* @media screen and (max-width: 768px) {
@@ -83,17 +173,9 @@ main {
 } */
 
 
-@media screen and (max-width: 768px) {
-    .search-bar {
-        width: 70%;
-    }
 
-    .popup-content {
-        width: 90%;
-    }
-}
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
     .search-bar {
         width: 90%;
     }
@@ -101,4 +183,4 @@ main {
     .popup-content {
         width: 100%;
     }
-}
+} */

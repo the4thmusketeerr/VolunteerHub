@@ -12,7 +12,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    
     <title>VolunteerHub</title>
 </head>
 <body>
@@ -36,10 +35,14 @@
 
       <main>
         <h1 class="discover">Create an Event</h1>
-        <form action="#" method="post">
+        <form action="/create" method="post" enctype="multipart/form-data">
           <div class="form-control">
             <label for="organizationName">Name of Organization</label>
             <input type="text" id="organizationName" name="organizationName" required>
+          </div>
+          <div class="form-control">
+            <label for="organizationInfo">Organization Information</label>
+            <textarea id="organizationInfo" name="organizationInfo" rows="3"></textarea>
           </div>
           <div class="form-control">
             <label for="eventTitle">Event Title</label>
@@ -50,8 +53,12 @@
             <textarea id="eventDescription" name="eventDescription" required rows="4"></textarea>
           </div>
           <div class="form-control">
-            <label for="dateTime">Date and Time</label>
-            <input type="datetime-local" id="dateTime" name="dateTime" required>
+            <label for="date">Date </label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div class="form-control">
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time" required>
           </div>
           <div class="form-control">
             <label for="location">Location</label>
@@ -91,10 +98,6 @@
           <div class="form-control">
             <label for="contactPhone">Contact Phone</label>
             <input type="tel" id="contactPhone" name="contactPhone" required>
-          </div>
-          <div class="form-control">
-            <label for="organizationInfo">Organization Information</label>
-            <textarea id="organizationInfo" name="organizationInfo" rows="3"></textarea>
           </div>
           <div class="form-control">
             <label for="imageUpload">Logo or Poster Upload</label>
@@ -171,6 +174,15 @@
         </div>
       </footer>
   
+      <script>
+        window.onload = function() {
+            if (window.location.href.includes('?created=true')) {
+                alert('Event created successfully!');
+                window.history.replaceState({}, document.title, '/create');
+            }
+        };
+     </script>
     
+      
 </body>
 </html>

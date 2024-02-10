@@ -121,7 +121,7 @@ button:hover{
 @media screen and (max-width: 768px) {
     .container {
         width: 90%; /* Adjust width for smaller screens */
-        max-width: 350px; /* Set a maximum width */
+        max-width: 450px; /* Set a maximum width */
     }
 
     .input-container {

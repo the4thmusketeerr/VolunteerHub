@@ -1,0 +1,279 @@
+main {
+    text-align: center;
+    margin: 40px 0;
+}
+
+main p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    
+}
+
+
+/* Hero Section */
+.hero-section{
+    height: 210px;
+    padding: 20px;
+    margin-left: 358px;
+    margin-right: 108px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    gap : 10px;
+} 
+
+.hero-text{
+    width: 80%;
+
+}
+
+.hero-text h1{
+    font-size: 3.3rem;
+    margin-bottom: 8px;
+    color: #8b4513;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.hero-text p{
+    font-size: 1.4 rem;
+    margin-bottom: 12px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+button{
+    padding: 1em 2.1em 1.1em;
+    border-radius: 4px;
+    margin: 8px;
+    border: none;
+    background-color: rgb(255, 217, 0);
+    color: #000000;
+    font-weight: 800;
+    font-size:0.85em;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 0em -0.2em 0em #e2e273 inset;
+}
+
+button:hover{
+   background-color: transparent;
+   color: #8b4513;
+   border: 3px solid #e2e273;
+   cursor: pointer; 
+}
+
+
+/* Card Section */
+h2{
+    margin-top: 50px;
+    margin-bottom: -100px;
+    font-family: 'DM Sans', sans-serif;
+    float: left;
+    margin-left: 150px;
+}
+.card-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.card {
+    width: 325px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    height: auto;
+    max-height: 344px; /* Change height to auto to accommodate variable content */
+}
+.card-link{
+    text-decoration: none;
+    color: #000000;
+}
+.card img {
+    width: 100%;
+    height: 140px; /* Set a fixed height for the images */
+    object-fit: cover; /* Maintain aspect ratio for the images */
+}
+
+.card-text {
+    height: calc(100% - 200px); /* Calculate the height for text content */
+    display: flex;
+    flex-direction: column;
+    font-family: 'DM Sans', sans-serif;
+    padding: 20px;
+    border-radius: 8px;
+    
+}
+.card-text h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text p {
+    margin: 5px 0;
+}
+
+.card-text .date-time {
+    margin-bottom: 10px;
+}
+
+.card-text .time {
+    margin-left: 20px;
+    /* Add any additional styling as needed */
+}
+
+
+.card-text .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: black;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    color: #fff;
+}
+
+
+
+/* Search Section */
+.search-section {
+    background-color: #f0f0f0;;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 100px;
+    width: 900px;
+    margin-left: 210px;
+    border-radius: 5px;
+}
+
+.search-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#searchForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchForm input[type="text"],
+
+#date {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 790px; 
+}
+#searchForm button {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#searchForm button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+/*How it works section */
+.how-it-works-section {
+    /* background-color: #f9f9f9; */
+    padding: 50px 0;
+    margin-top: 40px;
+
+}
+
+.how-it-works-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.how-it-works-step {
+    text-align: center;
+    margin: 20px;
+}
+
+.step-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    margin-left: 130px;
+    margin-bottom: 10px;
+}
+
+.how-it-works-step h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.how-it-works-step p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+
+/* Media Query for Screens Smaller Than 768px */
+@media screen and (max-width: 768px) {
+    .hero-section {
+        height: auto; /* Adjust height for responsiveness */
+        margin: 0;
+    }
+
+    .h2{
+        margin-top: 40px;
+    }
+
+    .hero-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .card-section {
+        margin-top: 20px;
+    }
+
+    .card {
+        max-width: 100%;
+        margin-top: 70px;
+    }
+
+    .search-section {
+        width: 100%;
+        margin-left: 0; /* Remove left margin on smaller screens */
+    }
+
+    #searchForm input[type="text"],
+    #date {
+        width: 100%;
+    }
+
+    .how-it-works-container {
+        flex-direction: column;
+    }
+}
